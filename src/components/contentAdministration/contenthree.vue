@@ -100,6 +100,188 @@
               </el-table-column>
             </el-table>
           </el-tab-pane>
+          <el-tab-pane label="技术中心-项目实施" name="ten">
+            <el-button type="primary" style="float:right;" @click="add()">添加</el-button>
+            <el-table :data="tableData" style="width: 100%" :row-class-name="tableRowClassName">
+              <el-table-column type="index" label="序号" width="50"></el-table-column>
+              <el-table-column prop="articleTitle" label="文章名称" width="270"></el-table-column>
+              <el-table-column prop="abbreviation" label="简称" width="270"></el-table-column>
+              <!-- <el-table-column prop="zip" label="主图名称" width="180"></el-table-column> -->
+              <el-table-column prop="createTime" label="发布时间" :formatter="dateFormat" width="150"></el-table-column>
+              <!-- <el-table-column prop="tag" label="显示顺序" width="200"></el-table-column> -->
+              <el-table-column prop="tag" label="设置在首页" width="200">
+                <template slot-scope="scope">
+                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">设置</el-button>
+                </template>
+              </el-table-column>
+              <el-table-column label="详情" width="200">
+                <template slot-scope="scope">
+                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">修改</el-button>
+                  <el-button
+                    size="mini"
+                    type="danger"
+                    @click="handleDelete(scope.$index, scope.row)"
+                  >删除</el-button>
+                </template>
+              </el-table-column>
+            </el-table>
+          </el-tab-pane>
+          <el-tab-pane label="技术中心-实施" name="seven">
+            <el-button type="primary" style="float:right;" @click="add()">添加</el-button>
+            <el-table :data="tableData" style="width: 100%" :row-class-name="tableRowClassName">
+              <el-table-column type="index" label="序号" width="50"></el-table-column>
+              <el-table-column prop="articleTitle" label="文章名称" width="270"></el-table-column>
+              <el-table-column prop="abbreviation" label="简称" width="270"></el-table-column>
+              <!-- <el-table-column prop="zip" label="主图名称" width="180"></el-table-column> -->
+              <el-table-column prop="createTime" label="发布时间" :formatter="dateFormat" width="150"></el-table-column>
+              <!-- <el-table-column prop="tag" label="显示顺序" width="200"></el-table-column> -->
+              <el-table-column prop="tag" label="设置在首页" width="200">
+                <template slot-scope="scope">
+                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">设置</el-button>
+                </template>
+              </el-table-column>
+              <el-table-column label="详情" width="200">
+                <template slot-scope="scope">
+                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">修改</el-button>
+                  <el-button
+                    size="mini"
+                    type="danger"
+                    @click="handleDelete(scope.$index, scope.row)"
+                  >删除</el-button>
+                </template>
+              </el-table-column>
+            </el-table>
+          </el-tab-pane>
+          <el-tab-pane label="技术中心-实施-人员技术服务" name="ten3">
+            <el-button type="primary" style="float:right;" @click="add()">添加</el-button>
+            <el-table :data="tableData" style="width: 100%" :row-class-name="tableRowClassName">
+              <el-table-column type="index" label="序号" width="50"></el-table-column>
+              <el-table-column prop="articleTitle" label="文章名称" width="270"></el-table-column>
+              <el-table-column prop="abbreviation" label="简称" width="270"></el-table-column>
+              <!-- <el-table-column prop="zip" label="主图名称" width="180"></el-table-column> -->
+              <el-table-column prop="createTime" label="发布时间" :formatter="dateFormat" width="150"></el-table-column>
+              <!-- <el-table-column prop="tag" label="显示顺序" width="200"></el-table-column> -->
+              <el-table-column prop="tag" label="设置在首页" width="200">
+                <template slot-scope="scope">
+                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">设置</el-button>
+                </template>
+              </el-table-column>
+              <el-table-column label="详情" width="200">
+                <template slot-scope="scope">
+                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">修改</el-button>
+                  <el-button
+                    size="mini"
+                    type="danger"
+                    @click="handleDelete(scope.$index, scope.row)"
+                  >删除</el-button>
+                </template>
+              </el-table-column>
+            </el-table>
+          </el-tab-pane>
+          <el-tab-pane label="技术中心-服务能力-运维服务" name="ten2">
+            <el-button type="primary" style="float:right;" @click="add()">添加</el-button>
+            <el-table :data="tableData" style="width: 100%" :row-class-name="tableRowClassName">
+              <el-table-column type="index" label="序号" width="50"></el-table-column>
+              <el-table-column prop="articleTitle" label="文章名称" width="270"></el-table-column>
+              <el-table-column prop="abbreviation" label="简称" width="270"></el-table-column>
+              <!-- <el-table-column prop="zip" label="主图名称" width="180"></el-table-column> -->
+              <el-table-column prop="createTime" label="发布时间" :formatter="dateFormat" width="150"></el-table-column>
+              <!-- <el-table-column prop="tag" label="显示顺序" width="200"></el-table-column> -->
+              <el-table-column prop="tag" label="设置在首页" width="200">
+                <template slot-scope="scope">
+                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">设置</el-button>
+                </template>
+              </el-table-column>
+              <el-table-column label="详情" width="200">
+                <template slot-scope="scope">
+                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">修改</el-button>
+                  <el-button
+                    size="mini"
+                    type="danger"
+                    @click="handleDelete(scope.$index, scope.row)"
+                  >删除</el-button>
+                </template>
+              </el-table-column>
+            </el-table>
+          </el-tab-pane>
+          <el-tab-pane label="技术能力-服务能力-咨询服务" name="ten1">
+            <el-button type="primary" style="float:right;" @click="add()">添加</el-button>
+            <el-table :data="tableData" style="width: 100%" :row-class-name="tableRowClassName">
+              <el-table-column type="index" label="序号" width="50"></el-table-column>
+              <el-table-column prop="articleTitle" label="文章名称" width="270"></el-table-column>
+              <el-table-column prop="abbreviation" label="简称" width="270"></el-table-column>
+              <!-- <el-table-column prop="zip" label="主图名称" width="180"></el-table-column> -->
+              <el-table-column prop="createTime" label="发布时间" :formatter="dateFormat" width="150"></el-table-column>
+              <!-- <el-table-column prop="tag" label="显示顺序" width="200"></el-table-column> -->
+              <el-table-column prop="tag" label="设置在首页" width="200">
+                <template slot-scope="scope">
+                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">设置</el-button>
+                </template>
+              </el-table-column>
+              <el-table-column label="详情" width="200">
+                <template slot-scope="scope">
+                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">修改</el-button>
+                  <el-button
+                    size="mini"
+                    type="danger"
+                    @click="handleDelete(scope.$index, scope.row)"
+                  >删除</el-button>
+                </template>
+              </el-table-column>
+            </el-table>
+          </el-tab-pane>
+          <el-tab-pane label="公司简介" name="ten4">
+            <el-button type="primary" style="float:right;" @click="add()">添加</el-button>
+            <el-table :data="tableData" style="width: 100%" :row-class-name="tableRowClassName">
+              <el-table-column type="index" label="序号" width="50"></el-table-column>
+              <el-table-column prop="articleTitle" label="文章名称" width="270"></el-table-column>
+              <el-table-column prop="abbreviation" label="简称" width="270"></el-table-column>
+              <!-- <el-table-column prop="zip" label="主图名称" width="180"></el-table-column> -->
+              <el-table-column prop="createTime" label="发布时间" :formatter="dateFormat" width="150"></el-table-column>
+              <!-- <el-table-column prop="tag" label="显示顺序" width="200"></el-table-column> -->
+              <el-table-column prop="tag" label="设置在首页" width="200">
+                <template slot-scope="scope">
+                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">设置</el-button>
+                </template>
+              </el-table-column>
+              <el-table-column label="详情" width="200">
+                <template slot-scope="scope">
+                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">修改</el-button>
+                  <el-button
+                    size="mini"
+                    type="danger"
+                    @click="handleDelete(scope.$index, scope.row)"
+                  >删除</el-button>
+                </template>
+              </el-table-column>
+            </el-table>
+          </el-tab-pane>
+          <el-tab-pane label="企业文化" name="ten5">
+            <el-button type="primary" style="float:right;" @click="add()">添加</el-button>
+            <el-table :data="tableData" style="width: 100%" :row-class-name="tableRowClassName">
+              <el-table-column type="index" label="序号" width="50"></el-table-column>
+              <el-table-column prop="articleTitle" label="文章名称" width="270"></el-table-column>
+              <el-table-column prop="abbreviation" label="简称" width="270"></el-table-column>
+              <!-- <el-table-column prop="zip" label="主图名称" width="180"></el-table-column> -->
+              <el-table-column prop="createTime" label="发布时间" :formatter="dateFormat" width="150"></el-table-column>
+              <!-- <el-table-column prop="tag" label="显示顺序" width="200"></el-table-column> -->
+              <el-table-column prop="tag" label="设置在首页" width="200">
+                <template slot-scope="scope">
+                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">设置</el-button>
+                </template>
+              </el-table-column>
+              <el-table-column label="详情" width="200">
+                <template slot-scope="scope">
+                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">修改</el-button>
+                  <el-button
+                    size="mini"
+                    type="danger"
+                    @click="handleDelete(scope.$index, scope.row)"
+                  >删除</el-button>
+                </template>
+              </el-table-column>
+            </el-table>
+          </el-tab-pane>
           <el-tab-pane label="公司新闻" name="four">
             <el-button type="primary" style="float:right;" @click="add()">添加</el-button>
             <el-table :data="tableData" style="width: 100%" :row-class-name="tableRowClassName">
@@ -178,189 +360,7 @@
               </el-table-column>
             </el-table>
           </el-tab-pane>
-          <el-tab-pane label="技术" name="seven">
-            <el-button type="primary" style="float:right;" @click="add()">添加</el-button>
-            <el-table :data="tableData" style="width: 100%" :row-class-name="tableRowClassName">
-              <el-table-column type="index" label="序号" width="50"></el-table-column>
-              <el-table-column prop="articleTitle" label="文章名称" width="270"></el-table-column>
-              <el-table-column prop="abbreviation" label="简称" width="270"></el-table-column>
-              <!-- <el-table-column prop="zip" label="主图名称" width="180"></el-table-column> -->
-              <el-table-column prop="createTime" label="发布时间" :formatter="dateFormat" width="150"></el-table-column>
-              <!-- <el-table-column prop="tag" label="显示顺序" width="200"></el-table-column> -->
-              <el-table-column prop="tag" label="设置在首页" width="200">
-                <template slot-scope="scope">
-                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">设置</el-button>
-                </template>
-              </el-table-column>
-              <el-table-column label="详情" width="200">
-                <template slot-scope="scope">
-                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">修改</el-button>
-                  <el-button
-                    size="mini"
-                    type="danger"
-                    @click="handleDelete(scope.$index, scope.row)"
-                  >删除</el-button>
-                </template>
-              </el-table-column>
-            </el-table>
-          </el-tab-pane>
           <el-tab-pane label="加入我们" name="eight">
-            <el-button type="primary" style="float:right;" @click="add()">添加</el-button>
-            <el-table :data="tableData" style="width: 100%" :row-class-name="tableRowClassName">
-              <el-table-column type="index" label="序号" width="50"></el-table-column>
-              <el-table-column prop="articleTitle" label="文章名称" width="270"></el-table-column>
-              <el-table-column prop="abbreviation" label="简称" width="270"></el-table-column>
-              <!-- <el-table-column prop="zip" label="主图名称" width="180"></el-table-column> -->
-              <el-table-column prop="createTime" label="发布时间" :formatter="dateFormat" width="150"></el-table-column>
-              <!-- <el-table-column prop="tag" label="显示顺序" width="200"></el-table-column> -->
-              <el-table-column prop="tag" label="设置在首页" width="200">
-                <template slot-scope="scope">
-                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">设置</el-button>
-                </template>
-              </el-table-column>
-              <el-table-column label="详情" width="200">
-                <template slot-scope="scope">
-                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">修改</el-button>
-                  <el-button
-                    size="mini"
-                    type="danger"
-                    @click="handleDelete(scope.$index, scope.row)"
-                  >删除</el-button>
-                </template>
-              </el-table-column>
-            </el-table>
-          </el-tab-pane>
-          <el-tab-pane label="技术能力-项目实施" name="ten">
-            <el-button type="primary" style="float:right;" @click="add()">添加</el-button>
-            <el-table :data="tableData" style="width: 100%" :row-class-name="tableRowClassName">
-              <el-table-column type="index" label="序号" width="50"></el-table-column>
-              <el-table-column prop="articleTitle" label="文章名称" width="270"></el-table-column>
-              <el-table-column prop="abbreviation" label="简称" width="270"></el-table-column>
-              <!-- <el-table-column prop="zip" label="主图名称" width="180"></el-table-column> -->
-              <el-table-column prop="createTime" label="发布时间" :formatter="dateFormat" width="150"></el-table-column>
-              <!-- <el-table-column prop="tag" label="显示顺序" width="200"></el-table-column> -->
-              <el-table-column prop="tag" label="设置在首页" width="200">
-                <template slot-scope="scope">
-                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">设置</el-button>
-                </template>
-              </el-table-column>
-              <el-table-column label="详情" width="200">
-                <template slot-scope="scope">
-                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">修改</el-button>
-                  <el-button
-                    size="mini"
-                    type="danger"
-                    @click="handleDelete(scope.$index, scope.row)"
-                  >删除</el-button>
-                </template>
-              </el-table-column>
-            </el-table>
-          </el-tab-pane>
-          <el-tab-pane label="技术能力-服务能力-咨询服务" name="ten1">
-            <el-button type="primary" style="float:right;" @click="add()">添加</el-button>
-            <el-table :data="tableData" style="width: 100%" :row-class-name="tableRowClassName">
-              <el-table-column type="index" label="序号" width="50"></el-table-column>
-              <el-table-column prop="articleTitle" label="文章名称" width="270"></el-table-column>
-              <el-table-column prop="abbreviation" label="简称" width="270"></el-table-column>
-              <!-- <el-table-column prop="zip" label="主图名称" width="180"></el-table-column> -->
-              <el-table-column prop="createTime" label="发布时间" :formatter="dateFormat" width="150"></el-table-column>
-              <!-- <el-table-column prop="tag" label="显示顺序" width="200"></el-table-column> -->
-              <el-table-column prop="tag" label="设置在首页" width="200">
-                <template slot-scope="scope">
-                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">设置</el-button>
-                </template>
-              </el-table-column>
-              <el-table-column label="详情" width="200">
-                <template slot-scope="scope">
-                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">修改</el-button>
-                  <el-button
-                    size="mini"
-                    type="danger"
-                    @click="handleDelete(scope.$index, scope.row)"
-                  >删除</el-button>
-                </template>
-              </el-table-column>
-            </el-table>
-          </el-tab-pane>
-          <el-tab-pane label="技术能力-服务能力-运维服务" name="ten2">
-            <el-button type="primary" style="float:right;" @click="add()">添加</el-button>
-            <el-table :data="tableData" style="width: 100%" :row-class-name="tableRowClassName">
-              <el-table-column type="index" label="序号" width="50"></el-table-column>
-              <el-table-column prop="articleTitle" label="文章名称" width="270"></el-table-column>
-              <el-table-column prop="abbreviation" label="简称" width="270"></el-table-column>
-              <!-- <el-table-column prop="zip" label="主图名称" width="180"></el-table-column> -->
-              <el-table-column prop="createTime" label="发布时间" :formatter="dateFormat" width="150"></el-table-column>
-              <!-- <el-table-column prop="tag" label="显示顺序" width="200"></el-table-column> -->
-              <el-table-column prop="tag" label="设置在首页" width="200">
-                <template slot-scope="scope">
-                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">设置</el-button>
-                </template>
-              </el-table-column>
-              <el-table-column label="详情" width="200">
-                <template slot-scope="scope">
-                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">修改</el-button>
-                  <el-button
-                    size="mini"
-                    type="danger"
-                    @click="handleDelete(scope.$index, scope.row)"
-                  >删除</el-button>
-                </template>
-              </el-table-column>
-            </el-table>
-          </el-tab-pane>
-          <el-tab-pane label="技术能力-服务能力-人员技术服务" name="ten3">
-            <el-button type="primary" style="float:right;" @click="add()">添加</el-button>
-            <el-table :data="tableData" style="width: 100%" :row-class-name="tableRowClassName">
-              <el-table-column type="index" label="序号" width="50"></el-table-column>
-              <el-table-column prop="articleTitle" label="文章名称" width="270"></el-table-column>
-              <el-table-column prop="abbreviation" label="简称" width="270"></el-table-column>
-              <!-- <el-table-column prop="zip" label="主图名称" width="180"></el-table-column> -->
-              <el-table-column prop="createTime" label="发布时间" :formatter="dateFormat" width="150"></el-table-column>
-              <!-- <el-table-column prop="tag" label="显示顺序" width="200"></el-table-column> -->
-              <el-table-column prop="tag" label="设置在首页" width="200">
-                <template slot-scope="scope">
-                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">设置</el-button>
-                </template>
-              </el-table-column>
-              <el-table-column label="详情" width="200">
-                <template slot-scope="scope">
-                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">修改</el-button>
-                  <el-button
-                    size="mini"
-                    type="danger"
-                    @click="handleDelete(scope.$index, scope.row)"
-                  >删除</el-button>
-                </template>
-              </el-table-column>
-            </el-table>
-          </el-tab-pane>
-          <el-tab-pane label="公司简介" name="ten4">
-            <el-button type="primary" style="float:right;" @click="add()">添加</el-button>
-            <el-table :data="tableData" style="width: 100%" :row-class-name="tableRowClassName">
-              <el-table-column type="index" label="序号" width="50"></el-table-column>
-              <el-table-column prop="articleTitle" label="文章名称" width="270"></el-table-column>
-              <el-table-column prop="abbreviation" label="简称" width="270"></el-table-column>
-              <!-- <el-table-column prop="zip" label="主图名称" width="180"></el-table-column> -->
-              <el-table-column prop="createTime" label="发布时间" :formatter="dateFormat" width="150"></el-table-column>
-              <!-- <el-table-column prop="tag" label="显示顺序" width="200"></el-table-column> -->
-              <el-table-column prop="tag" label="设置在首页" width="200">
-                <template slot-scope="scope">
-                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">设置</el-button>
-                </template>
-              </el-table-column>
-              <el-table-column label="详情" width="200">
-                <template slot-scope="scope">
-                  <el-button size="mini" @click="handleEdit(scope.$index, scope.row)">修改</el-button>
-                  <el-button
-                    size="mini"
-                    type="danger"
-                    @click="handleDelete(scope.$index, scope.row)"
-                  >删除</el-button>
-                </template>
-              </el-table-column>
-            </el-table>
-          </el-tab-pane>
-          <el-tab-pane label="企业文化" name="ten5">
             <el-button type="primary" style="float:right;" @click="add()">添加</el-button>
             <el-table :data="tableData" style="width: 100%" :row-class-name="tableRowClassName">
               <el-table-column type="index" label="序号" width="50"></el-table-column>
@@ -438,6 +438,7 @@
               </el-table-column>
             </el-table>
           </el-tab-pane>
+
         </el-tabs>
          <div class="block">
             <el-pagination
@@ -451,7 +452,7 @@
           </div>
       </div>
     </div>
-    <el-dialog title="详情页编写" :visible.sync="dialogVisible" width="80%">
+    <el-dialog title="详情页编写" :visible.sync="dialogVisible" :close-on-click-modal="false" width="80%">
       <div>
         <fwb :categoryId="this.categoryId"></fwb>
       </div>
@@ -460,7 +461,7 @@
         <el-button type="primary" @click="yes()">确 定</el-button>
       </span>
     </el-dialog>
-    <el-dialog title="详情修改" :visible.sync="dialog1" width="80%">
+    <el-dialog title="详情修改" :visible.sync="dialog1" :close-on-click-modal="false" width="80%">
       <ueditor :mondify="this.mondifyForm"></ueditor>
       <!-- <el-form v-model="mondifyForm" class="demo-form-inline" label-width="100px"> -->
       <!-- <el-form-item label="文章名称:">
@@ -670,6 +671,8 @@ export default {
         return "warning-row";
       } else if (rowIndex === 3) {
         return "success-row";
+      } else if (rowIndex === 5) {
+        return "warning-row";
       }
       return "";
     }
